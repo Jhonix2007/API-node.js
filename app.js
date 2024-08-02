@@ -14,7 +14,7 @@ servidor.get('/calculadora/somar/:n1/:n2', (req, resp) => {
 })
 
 
-servidor.get('/calculadora/subtrair', (req, resp) => {
+servidor.get('/calculadora/subtrair/:n1/:n2/:n3', (req, resp) => {
     let p = 13.50
     let m = 15.00
     let g = 17.50
@@ -28,7 +28,7 @@ servidor.get('/calculadora/subtrair', (req, resp) => {
     
 
     resp.send(
-        `A compra foi ${sub} açai pequeno,${sub2} açai medio e ${sub3} açai grande`);
+        `A compra foi R$${sub} açai pequeno,R$${sub2} açai medio e R$${sub3} açai grande`);
 })
 
 
