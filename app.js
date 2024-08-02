@@ -15,12 +15,20 @@ servidor.get('/calculadora/somar/:n1/:n2', (req, resp) => {
 
 
 servidor.get('/calculadora/subtrair', (req, resp) => {
-    let n1 = Number(req.query.numero1);
-    let n2 = Number(req.query.n2);
+    let p = 13.50
+    let m = 15.00
+    let g = 17.50
 
-    let sub = n1 - n2;
+    let n1 = Number(req.params.n1);
+    let n2 = Number(req.params.n2);
+    let n3 = Number(req.params.n3);
+    let sub  = n1*p
+    let sub2 = n2*m
+    let sub3 = n3*g
+    
 
-    resp.send('A subtração é ' + sub);
+    resp.send(
+        `A compra foi ${sub} açai pequeno,${sub2} açai medio e ${sub3} açai grande`);
 })
 
 
